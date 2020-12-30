@@ -12,7 +12,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
   const [isEditing, toggle] = useToggleState(false);
   return (
-    <ListItem>
+    <ListItem style={{ height: "64px" }}>
       {isEditing ? (
         <EditTodoForm 
           editTodo={editTodo}
@@ -28,7 +28,7 @@ function Todo({ id, task, completed, removeTodo, toggleTodo, editTodo }) {
             onClick={() => toggleTodo(id)}
           />
           <ListItemText 
-            style={{textDecoration: completed && "line-through"}}
+            style={{textDecoration: completed && "line-through", maxWidth: "60%"}}
           >
             {task}
           </ListItemText>
