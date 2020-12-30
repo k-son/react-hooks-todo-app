@@ -4,7 +4,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import Todo from './Todo';
 
-function TodoList({ todos, deleteTodo, removeTodo, toggleTodo }) {
+function TodoList({ todos, deleteTodo, removeTodo, toggleTodo, editTodo }) {
   return (
     <Paper>
       <List>
@@ -18,6 +18,7 @@ function TodoList({ todos, deleteTodo, removeTodo, toggleTodo }) {
               deleteTodo={deleteTodo}
               removeTodo={removeTodo}
               toggleTodo={toggleTodo}
+              editTodo={editTodo}
             />
             <Divider />
           </>
