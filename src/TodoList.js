@@ -5,6 +5,7 @@ import Divider from '@material-ui/core/Divider';
 import Todo from './Todo';
 
 function TodoList({ todos, deleteTodo, removeTodo, toggleTodo, editTodo }) {
+  if (todos.length)
   return (
     <Paper>
       <List>
@@ -26,6 +27,7 @@ function TodoList({ todos, deleteTodo, removeTodo, toggleTodo, editTodo }) {
       </List>
     </Paper>
   );
+  return null;
 }
 
 export default TodoList;
